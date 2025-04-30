@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #ccc;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #6a00ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #944dff;
+}
+
+.back-btn {
+  background-color: #333;
+  margin-top: 15px;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.member {
+  margin-bottom: 20px;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #ddd;
+}

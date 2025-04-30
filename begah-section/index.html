@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Begah Section - Pendaftaran Turnamen Free Fire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form id="registrationForm" enctype="multipart/form-data">
+      <!-- Step 1 -->
+      <div class="form-step active" id="step1">
+        <h2>📄 Nama Tim</h2>
+        <input type="text" id="teamName" placeholder="Masukkan Nama Tim" required />
+        <p class="warning" id="warnTeam"></p>
+        <button type="button" onclick="nextStep(1)">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step2">
+        <h2>👥 Daftar Anggota Tim</h2>
+        <div class="member">
+          <h3>Kapten</h3>
+          <input type="text" placeholder="Nama In-Game" class="input" required />
+          <input type="text" placeholder="Nama Discord" class="input" required />
+        </div>
+        <div class="member">
+          <h3>Player 1</h3>
+          <input type="text" placeholder="Nama In-Game" class="input" required />
+          <input type="text" placeholder="Nama Discord" class="input" required />
+        </div>
+        <div class="member">
+          <h3>Player 2</h3>
+          <input type="text" placeholder="Nama In-Game" class="input" required />
+          <input type="text" placeholder="Nama Discord" class="input" required />
+        </div>
+        <div class="member">
+          <h3>Player 3</h3>
+          <input type="text" placeholder="Nama In-Game" class="input" required />
+          <input type="text" placeholder="Nama Discord" class="input" required />
+        </div>
+        <div class="member">
+          <h3>Player 4</h3>
+          <input type="text" placeholder="Nama In-Game" class="input" required />
+          <input type="text" placeholder="Nama Discord" class="input" required />
+        </div>
+        <div class="member">
+          <h3>Cadangan (opsional)</h3>
+          <input type="text" placeholder="Nama In-Game (opsional)" class="input" />
+          <input type="text" placeholder="Nama Discord (opsional)" class="input" />
+        </div>
+        <p class="warning" id="warnMember"></p>
+        <button type="button" onclick="nextStep(2)">Next</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step" id="step3">
+        <h2>🖼️ Upload Logo Tim</h2>
+        <input type="file" id="logo" accept="image/png, image/jpeg" required />
+        <p class="warning" id="warnLogo"></p>
+        <button type="submit" id="submitBtn">Daftarkan</button>
+        <p id="successMessage"></p>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
